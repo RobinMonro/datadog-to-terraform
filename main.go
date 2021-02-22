@@ -33,7 +33,7 @@ func request(method, url string, headers map[string]string) (*http.Response, err
 	return client.Do(req)
 }
 
-func main() {
+func main() { // add your 'exported' monitor or dashboard text gained from Datadog
 	body := `{
 		"id": 0,
 		"name": "",
@@ -56,7 +56,7 @@ func main() {
 		"priority": null
 	}`
 
-	resourceType := "monitor"
+	resourceType := "monitor" // "monitor" or "dashboard"
 
 	resourceId := "monitor_name"
 	if resourceType == "dashboard" {
